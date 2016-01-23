@@ -1,0 +1,24 @@
+
+<!-- Liste des blog posts -->
+<div class="container">
+
+  <md-content class="md-padding" layout-xs="column" layout="row" ng-repeat="post in home.posts track by $index">
+    <md-card>
+      <img ng-src="{{post.media}}" class="md-card-image" alt="">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{post.title}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <p>{{post.description}}</p>
+      </md-card-content>
+  <!--     <md-card-actions layout="row" layout-align="end center">
+        <md-button>Action 1</md-button>
+        <md-button>Action 2</md-button>
+      </md-card-actions> -->
+    </md-card>
+  </md-content>
+
+</div>
+<!-- Fin Liste des blog posts -->

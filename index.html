@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Socket App</title>
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  
+  <!-- Angular material -->
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+
+  <!-- Custom style -->
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+<body ng-app="BlogApp" ng-cloak>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li ng-class="{'active':('home' | isState)}"><a href="#/">Accueil</a></li>
+      <li ng-class="{'active':('map' | isState)}"><a href="#/map">Carte des contacts</a></li>
+    </ul>
+  </div>
+</nav><!-- .navbar -->
+
+<main class="container">
+  <div ui-view></div>
+</main><!-- .container -->
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+
+<!-- Main app files -->
+<script src="scripts/app.js"></script>
+<script src="scripts/HomeCtrl.js"></script>
+<script src="scripts/MapCtrl.js"></script>
+  
+</body>
+</html>
